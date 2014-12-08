@@ -7,8 +7,8 @@ at your own risk.  YMMV.  Do not try this at home.  Professional
 driver, closed course.  Consumption of =nbodybox= may cause hives,
 itching, dizzyness and spelling errors.
 
-* Work in progress:
-** DONE Create node-webkit project
+* Things that work:
+** Create node-webkit project
 - Adapt Brett Lischalk's [[https://github.com/blischalk/cljs-node-webkit-app/][work-in-progress]] ([[https://github.com/blischalk/cljs-node-webkit-app/blob/master/project.clj][project.clj]] and other files).
 - Use [[https://github.com/wilkerlucio/lein-node-webkit-build][this project]] to build (=lein node-webkit-build=).
 - Workflow (using [[https://github.com/eigenhombre/continuous-testing-helper][conttest]]):
@@ -28,7 +28,7 @@ would like to find a workflow which is a bit more interactive, but
 haven't figured out how to get a working ClojureScript REPL *plus* a
 Node Webkit build working in the same project yet.
 
-** DONE Create cool icon
+** Create cool icon
 
 Directions:
 - make square PNG image any way you care to.
@@ -37,14 +37,15 @@ Directions:
 - Add =:osx { :icon "resources/icons/myicon.icns"}= to
   =:node-webkit-build= map in =project.clj=.
 
-** DONE Create cool splash screen
+** Create cool splash screen
 (Splash screens can be lame, I know, but it's my project, dammit.)
 
 See [[https://github.com/rogerwang/node-webkit/issues/811]].  Currently
 the first window started is the main screen.  It will need to create
 the "main" app window when it closes.
 
-
+* Next Steps
+** Make the simplest possible WebGL rendering in a new window after splash screen exits.
 * Disclaimer
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,

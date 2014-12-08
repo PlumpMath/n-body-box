@@ -1,6 +1,6 @@
 #+TITLE: nbodybox
 
-Playground for playing with WebGL, Node-Webkit and ClojureScript.
+Playground for working with WebGL, Node-Webkit and ClojureScript.
 
 Under construction.  Hard hats required.  Pointy bits everywhere.  Use
 at your own risk.  YMMV.  Do not try this at home.  Professional
@@ -14,23 +14,19 @@ itching, dizzyness and spelling errors.
 - Workflow (using [[https://github.com/eigenhombre/continuous-testing-helper][conttest]]):
 
 #+BEGIN_EXAMPLE
-    conttest '\
+    conttest ' \
       touch src/cljs/nbodybox/core.cljs && \
-      lein cljsbuild once    && \
-      lein node-webkit-build && \
+      lein cljsbuild once               && \
+      lein node-webkit-build            && \
       unzip -o releases/NBodyBox-v0.0.0/NBodyBox-osx64-v0.0.0.zip && \
       open NBodyBox.app'
 #+END_EXAMPLE
 
-(This unfortunately takes several seconds; I would like to find a
-workflow which is a bit more interactive, but haven't figured out how
-to get a working ClojureScript REPL *plus* a Node Webkit build working
-in the same project yet).
-
-** TODO Create cool splash screen
-(splash screens can be lame, I know, but it's my project, dammit.)
-
-See [[https://github.com/rogerwang/node-webkit/issues/811]].
+This will cause the app to be rebuilt every time you save a file in
+the directory.  Unfortunately the whole thing takes several seconds; I
+would like to find a workflow which is a bit more interactive, but
+haven't figured out how to get a working ClojureScript REPL *plus* a
+Node Webkit build working in the same project yet.
 
 ** DONE Create cool icon
 (ditto)
@@ -41,6 +37,12 @@ Directions:
   =resources/icons/myicon.icns=.
 - Add =:osx { :icon "resources/icons/myicon.icns"}= to
   =:node-webkit-build= map in =project.clj=.
+
+** DONE Create cool splash screen
+(Splash screens can be lame, I know, but it's my project, dammit.)
+
+See [[https://github.com/rogerwang/node-webkit/issues/811]].
+
 
 * Disclaimer
 

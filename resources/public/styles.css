@@ -1,3 +1,13 @@
-.username {
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+img.splash {
+    padding: 0;
+}
+
+.container {
+    margin-left: -13px;
 }

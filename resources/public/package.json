@@ -1,17 +1,20 @@
 {
-  "name": "Breakout",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "window": {
-    "toolbar": true,
-    "focus": true,
-    "width": 1024,
-    "height": 600
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "NBodyBox",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "window": {
+	"toolbar": true,
+	"focus": true,
+	"frame": false,
+	"resize": false,
+	"width": 1162,
+	"height": 600,
+	"resizable": false
+    },
+    "author": "John Jacobsen",
+    "license": "MIT"
 }

@@ -42070,56 +42070,31 @@ nbodybox.core.username = function() {
     return process.env.USER;
   }
 }();
-nbodybox.core.create_menu_BANG_ = function create_menu_BANG_() {
-  var nw = require("nw.gui");
-  var win = nw.Window.get();
-  var mb = new nw.Menu(function() {
-    var obj5751 = {"type":"menubar"};
-    return obj5751;
-  }());
-  if (cljs.core._EQ_.call(null, process.platform, "darwin")) {
-    mb.createMacBuiltin(nbodybox.core.app_name);
-  } else {
-  }
-  return win.menu = mb;
-};
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "compiledresources/public/templates/main-content.html") == null) {
-  var vec__5753_5758 = enfocus.core.replace_ids.call(null, "en5752_", '\x3c!DOCTYPE html\x3e\n\x3chtml\x3e\n\x3cbody\x3e\n  \x3cdiv class\x3d"starter-template"\x3e\n    \x3ch1\x3eNBodyBox... a desktop application... for you.\x3c/h1\x3e\n    \x3cp class\x3d"lead"\x3eHello \x3cspan class\x3d"username"\x3eUser\x3c/span\x3e....\x3c/p\x3e\n    \x3cp\x3eWhat a difference a day makes.\x3c/p\x3e\n\n  \x3c/div\x3e\n\x3c/body\x3e\n\x3c/html\x3e\n');
-  var sym__4717__auto___5759 = cljs.core.nth.call(null, vec__5753_5758, 0, null);
-  var txt__4718__auto___5760 = cljs.core.nth.call(null, vec__5753_5758, 1, null);
-  cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "compiledresources/public/templates/main-content.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sym__4717__auto___5759, txt__4718__auto___5760], null));
+  var vec__5749_5754 = enfocus.core.replace_ids.call(null, "en5748_", '\x3c!DOCTYPE html\x3e\n\x3chtml class\x3d"splash"\x3e\n  \x3cbody\x3e\n    \x3cimg class\x3d"splash" src\x3d"splash.png"/\x3e\n  \x3c/body\x3e\n\x3c/html\x3e\n');
+  var sym__4717__auto___5755 = cljs.core.nth.call(null, vec__5749_5754, 0, null);
+  var txt__4718__auto___5756 = cljs.core.nth.call(null, vec__5749_5754, 1, null);
+  cljs.core.swap_BANG_.call(null, enfocus.core.tpl_cache, cljs.core.assoc, "compiledresources/public/templates/main-content.html", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sym__4717__auto___5755, txt__4718__auto___5756], null));
 } else {
 }
 nbodybox.core.main_content = function main_content(username) {
-  var vec__5757 = function() {
+  var vec__5753 = function() {
     return enfocus.core.get_cached_dom.call(null, "compiledresources/public/templates/main-content.html");
   }.call(null);
-  var id_sym5754 = cljs.core.nth.call(null, vec__5757, 0, null);
-  var pnod5755 = cljs.core.nth.call(null, vec__5757, 1, null);
-  var pnod5755__$1 = enfocus.core.create_hidden_dom.call(null, pnod5755);
-  enfocus.core.i_at.call(null, id_sym5754, pnod5755__$1, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [".username"], null), enfocus.core.content.call(null, username));
-  enfocus.core.reset_ids.call(null, id_sym5754, pnod5755__$1);
-  return enfocus.core.remove_node_return_child.call(null, pnod5755__$1);
-};
-nbodybox.core.page_change = function page_change(content, nav_ele) {
-  return enfocus.core.at.call(null, document, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [".starter-template"], null), enfocus.core.content.call(null, content), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [nav_ele], null), enfocus.core.add_class.call(null, "active"), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["nav li:not(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(nav_ele) + ")"], 
-  null), enfocus.core.remove_class.call(null, "active"));
-};
-nbodybox.core.attach_nav_handlers_BANG_ = function attach_nav_handlers_BANG_() {
-  return enfocus.core.at.call(null, document, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["nav .main"], null), enfocus.events.listen.call(null, new cljs.core.Keyword(null, "click", "click", 1912301393), function() {
-    return nbodybox.core.page_change.call(null, nbodybox.core.main_content.call(null, nbodybox.core.username), ".main");
-  }));
-};
-nbodybox.core.update_greeting_BANG_ = function update_greeting_BANG_() {
-  return enfocus.core.at.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [".username"], null), enfocus.core.content.call(null, nbodybox.core.username));
+  var id_sym5750 = cljs.core.nth.call(null, vec__5753, 0, null);
+  var pnod5751 = cljs.core.nth.call(null, vec__5753, 1, null);
+  var pnod5751__$1 = enfocus.core.create_hidden_dom.call(null, pnod5751);
+  enfocus.core.i_at.call(null, id_sym5750, pnod5751__$1, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [".username"], null), enfocus.core.content.call(null, username));
+  enfocus.core.reset_ids.call(null, id_sym5750, pnod5751__$1);
+  return enfocus.core.remove_node_return_child.call(null, pnod5751__$1);
 };
 nbodybox.core.add_main_content_BANG_ = function add_main_content_BANG_() {
   return enfocus.core.at.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["body \x3e .container"], null), enfocus.core.content.call(null, nbodybox.core.main_content.call(null, nbodybox.core.username)));
 };
 nbodybox.core.start = function start() {
-  nbodybox.core.create_menu_BANG_.call(null);
-  nbodybox.core.add_main_content_BANG_.call(null);
-  nbodybox.core.update_greeting_BANG_.call(null);
-  return nbodybox.core.attach_nav_handlers_BANG_.call(null);
+  return nbodybox.core.add_main_content_BANG_.call(null);
 };
 window.onload = nbodybox.core.start;
+window.setTimeout(function() {
+  return window.close();
+}, 4E3);

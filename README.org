@@ -29,7 +29,6 @@ haven't figured out how to get a working ClojureScript REPL *plus* a
 Node Webkit build working in the same project yet.
 
 ** DONE Create cool icon
-(ditto)
 
 Directions:
 - make square PNG image any way you care to.

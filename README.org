@@ -11,22 +11,24 @@ itching, dizzyness and spelling errors.
 ** DONE Create node-webkit project
 - Adapt Brett Lischalk's [[https://github.com/blischalk/cljs-node-webkit-app/][work-in-progress]] ([[https://github.com/blischalk/cljs-node-webkit-app/blob/master/project.clj][project.clj]] and other files).
 - Use [[https://github.com/wilkerlucio/lein-node-webkit-build][this project]] to build (=lein node-webkit-build=).
-- Workflow (using [[https://github.com/eigenhombre/continuous-testing-helper][=conttest=]]):
+- Workflow (using [[https://github.com/eigenhombre/continuous-testing-helper][conttest]]):
 
 #+BEGIN_EXAMPLE
     conttest '\
-    touch src/cljs/nbodybox/core.cljs && \
-    lein cljsbuild once    && \
-    lein node-webkit-build && \
-    unzip -o releases/NBodyBox-v0.0.0/NBodyBox-osx64-v0.0.0.zip && \
-    open NBodyBox.app'
+      touch src/cljs/nbodybox/core.cljs && \
+      lein cljsbuild once    && \
+      lein node-webkit-build && \
+      unzip -o releases/NBodyBox-v0.0.0/NBodyBox-osx64-v0.0.0.zip && \
+      open NBodyBox.app'
 #+END_EXAMPLE
 
-(This unfortunately takes several seconds; would like to find a
-workflow which is more interactive...).
+(This unfortunately takes several seconds; I would like to find a
+workflow which is a bit more interactive, but haven't figured out how
+to get a working ClojureScript REPL *plus* a Node Webkit build working
+in the same project yet).
 
 ** TODO Create cool splash screen
-(lame, I know, but it's my project, dammit)
+(splash screens can be lame, I know, but it's my project, dammit.)
 
 See [[https://github.com/rogerwang/node-webkit/issues/811]].
 

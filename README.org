@@ -44,8 +44,10 @@ See [[https://github.com/rogerwang/node-webkit/issues/811]].  Currently
 the first window started is the main screen.  It will need to create
 the "main" app window when it closes.
 
-* Next Steps
-** Make the simplest possible WebGL rendering in a new window after splash screen exits.
+* Next Steps:
+
+Make the simplest possible WebGL rendering.
+
 * Disclaimer
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,

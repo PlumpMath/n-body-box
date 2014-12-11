@@ -42070,6 +42070,7 @@ nbodybox.core.username = function() {
     return process.env.USER;
   }
 }();
+nbodybox.core.gui = require("nw.gui");
 if (cljs.core.deref.call(null, enfocus.core.tpl_cache).call(null, "compiledresources/public/templates/main-content.html") == null) {
   var vec__5749_5754 = enfocus.core.replace_ids.call(null, "en5748_", '\x3c!DOCTYPE html\x3e\n\x3chtml class\x3d"splash"\x3e\n  \x3cbody\x3e\n    \x3cimg class\x3d"splash" src\x3d"splash.png"/\x3e\n  \x3c/body\x3e\n\x3c/html\x3e\n');
   var sym__4717__auto___5755 = cljs.core.nth.call(null, vec__5749_5754, 0, null);
@@ -42094,7 +42095,9 @@ nbodybox.core.add_main_content_BANG_ = function add_main_content_BANG_() {
 nbodybox.core.start = function start() {
   return nbodybox.core.add_main_content_BANG_.call(null);
 };
+nbodybox.core.swap_splash_for_main_window = function swap_splash_for_main_window() {
+  window.close();
+  return nbodybox.core.gui.Window.open("main.html", {"height":600, "width":1E3, "toolbar":false});
+};
 window.onload = nbodybox.core.start;
-window.setTimeout(function() {
-  return window.close();
-}, 4E3);
+window.setTimeout(nbodybox.core.swap_splash_for_main_window, 4E3);
